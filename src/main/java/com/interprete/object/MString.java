@@ -1,15 +1,18 @@
 package com.interprete.object;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * Representa un objeto string en runtime.
  */
-@Getter
-@AllArgsConstructor
 public class MString implements MObject {
     private String value;
+    
+    public MString(String value) {
+        this.value = value;
+    }
+    
+    public String getValue() {
+        return value;
+    }
     
     @Override
     public ObjectType type() {

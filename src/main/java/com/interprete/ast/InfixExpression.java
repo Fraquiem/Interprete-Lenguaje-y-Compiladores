@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una expresión con operador infijo.
  * Ejemplos: 5 + 3, x == y, a < b
  */
-@Getter
 public class InfixExpression extends Expression {
     private Expression left;
     private String operator;
@@ -19,6 +17,18 @@ public class InfixExpression extends Expression {
         this.operator = operator;
         this.right = right;
     }
+    public Expression getLeft() {
+        return left;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public Expression getRight() {
+        return right;
+    }
+
     
     @Override
     public String toString() {

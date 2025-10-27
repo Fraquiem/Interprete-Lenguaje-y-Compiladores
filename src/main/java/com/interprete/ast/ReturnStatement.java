@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una declaración return.
  * Ejemplo: return 5;
  */
-@Getter
 public class ReturnStatement extends Statement {
     private Expression returnValue;
     
@@ -15,6 +13,10 @@ public class ReturnStatement extends Statement {
         super(token);
         this.returnValue = returnValue;
     }
+    public Expression getReturnValue() {
+        return returnValue;
+    }
+
     
     @Override
     public String toString() {

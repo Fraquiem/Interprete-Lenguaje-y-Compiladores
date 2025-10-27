@@ -1,18 +1,20 @@
 package com.interprete.ast;
 
-import lombok.Getter;
 
 import java.util.List;
 
 /**
  * Representa un programa completo, que es una secuencia de statements.
  */
-@Getter
 public class Program implements ASTNode {
     private List<Statement> statements;
     
     public Program(List<Statement> statements) {
         this.statements = statements;
+    }
+    
+    public List<Statement> getStatements() {
+        return statements;
     }
     
     @Override

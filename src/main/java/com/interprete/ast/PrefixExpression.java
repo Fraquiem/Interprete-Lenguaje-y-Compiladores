@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una expresión con operador prefijo.
  * Ejemplos: !true, -5
  */
-@Getter
 public class PrefixExpression extends Expression {
     private String operator;
     private Expression right;
@@ -17,6 +15,14 @@ public class PrefixExpression extends Expression {
         this.operator = operator;
         this.right = right;
     }
+    public String getOperator() {
+        return operator;
+    }
+
+    public Expression getRight() {
+        return right;
+    }
+
     
     @Override
     public String toString() {

@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una expresión if-else.
  * Ejemplo: if (x > 0) { return 1; } else { return -1; }
  */
-@Getter
 public class IfExpression extends Expression {
     private Expression condition;
     private BlockStatement consequence;
@@ -19,6 +17,18 @@ public class IfExpression extends Expression {
         this.consequence = consequence;
         this.alternative = alternative;
     }
+    public Expression getCondition() {
+        return condition;
+    }
+
+    public BlockStatement getConsequence() {
+        return consequence;
+    }
+
+    public BlockStatement getAlternative() {
+        return alternative;
+    }
+
     
     @Override
     public String toString() {

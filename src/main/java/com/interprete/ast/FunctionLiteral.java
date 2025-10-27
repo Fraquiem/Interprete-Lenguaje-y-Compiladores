@@ -1,7 +1,6 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -9,7 +8,6 @@ import java.util.List;
  * Representa un literal de función (definición de función).
  * Ejemplo: function(x, y) { x + y; }
  */
-@Getter
 public class FunctionLiteral extends Expression {
     private List<Identifier> parameters;
     private BlockStatement body;
@@ -19,6 +17,14 @@ public class FunctionLiteral extends Expression {
         this.parameters = parameters;
         this.body = body;
     }
+    public List<Identifier> getParameters() {
+        return parameters;
+    }
+
+    public BlockStatement getBody() {
+        return body;
+    }
+
     
     @Override
     public String toString() {

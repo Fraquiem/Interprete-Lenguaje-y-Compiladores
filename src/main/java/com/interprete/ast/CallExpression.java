@@ -1,7 +1,6 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -9,7 +8,6 @@ import java.util.List;
  * Representa una llamada a función.
  * Ejemplo: suma(1, 2)
  */
-@Getter
 public class CallExpression extends Expression {
     private Expression function;
     private List<Expression> arguments;
@@ -19,6 +17,14 @@ public class CallExpression extends Expression {
         this.function = function;
         this.arguments = arguments;
     }
+    public Expression getFunction() {
+        return function;
+    }
+
+    public List<Expression> getArguments() {
+        return arguments;
+    }
+
     
     @Override
     public String toString() {

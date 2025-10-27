@@ -1,7 +1,6 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 import java.util.List;
 
@@ -9,7 +8,6 @@ import java.util.List;
  * Representa un bloque de código (entre llaves).
  * Ejemplo: { let x = 5; let y = 10; }
  */
-@Getter
 public class BlockStatement extends Statement {
     private List<Statement> statements;
     
@@ -17,6 +15,10 @@ public class BlockStatement extends Statement {
         super(token);
         this.statements = statements;
     }
+    public List<Statement> getStatements() {
+        return statements;
+    }
+
     
     @Override
     public String toString() {

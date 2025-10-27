@@ -1,12 +1,10 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa un literal entero.
  */
-@Getter
 public class IntegerLiteral extends Expression {
     private Integer value;
     
@@ -14,6 +12,10 @@ public class IntegerLiteral extends Expression {
         super(token);
         this.value = value;
     }
+    public Integer getValue() {
+        return value;
+    }
+
     
     @Override
     public String toString() {

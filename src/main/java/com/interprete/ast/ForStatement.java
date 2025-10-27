@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa un bucle for (simplificado estilo Go).
  * Ejemplo: for (let i = 0; i < 10; i = i + 1) { ... }
  */
-@Getter
 public class ForStatement extends Statement {
     private Statement initialization;
     private Expression condition;
@@ -21,6 +19,22 @@ public class ForStatement extends Statement {
         this.increment = increment;
         this.body = body;
     }
+    public Statement getInitialization() {
+        return initialization;
+    }
+
+    public Expression getCondition() {
+        return condition;
+    }
+
+    public Statement getIncrement() {
+        return increment;
+    }
+
+    public BlockStatement getBody() {
+        return body;
+    }
+
     
     @Override
     public String toString() {

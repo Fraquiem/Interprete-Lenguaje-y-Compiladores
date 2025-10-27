@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una declaración let (variable).
  * Ejemplo: let x = 5;
  */
-@Getter
 public class LetStatement extends Statement {
     private Identifier name;
     private Expression value;
@@ -17,6 +15,14 @@ public class LetStatement extends Statement {
         this.name = name;
         this.value = value;
     }
+    public Identifier getName() {
+        return name;
+    }
+
+    public Expression getValue() {
+        return value;
+    }
+
     
     @Override
     public String toString() {

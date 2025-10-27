@@ -707,4 +707,4 @@ Este lenguaje es un intérprete educativo completo que demuestra:
 
 ---
 
-*Última actualización: 2024*
+*Última actualización: 27/10/2025*

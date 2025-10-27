@@ -1,15 +1,18 @@
 package com.interprete.object;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * Representa un objeto booleano en runtime.
  */
-@Getter
-@AllArgsConstructor
 public class MBoolean implements MObject {
     private Boolean value;
+    
+    public MBoolean(Boolean value) {
+        this.value = value;
+    }
+    
+    public Boolean getValue() {
+        return value;
+    }
     
     @Override
     public ObjectType type() {

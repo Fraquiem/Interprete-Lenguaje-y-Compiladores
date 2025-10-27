@@ -1,15 +1,18 @@
 package com.interprete.object;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 /**
  * Representa un objeto entero en runtime.
  */
-@Getter
-@AllArgsConstructor
 public class MInteger implements MObject {
     private Integer value;
+    
+    public MInteger(Integer value) {
+        this.value = value;
+    }
+    
+    public Integer getValue() {
+        return value;
+    }
     
     @Override
     public ObjectType type() {

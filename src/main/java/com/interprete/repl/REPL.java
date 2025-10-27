@@ -17,8 +17,8 @@ public class REPL {
     private static final String PROMPT = ">>> ";
     
     public static void start() {
-        System.out.println("Welcome to Go Interpreter!");
-        System.out.println("Type 'exit' or 'end' to quit.");
+        System.out.println("Bienvenido al interprete TPE!");
+        System.out.println("Escribe 'salir' o 'end' para terminar.");
         
         Scanner scanner = new Scanner(System.in);
         Environment env = new Environment();
@@ -32,8 +32,9 @@ public class REPL {
             
             String line = scanner.nextLine();
             
-            if (line.trim().equalsIgnoreCase("exit") || line.trim().equalsIgnoreCase("end")) {
-                System.out.println("Goodbye!");
+            if (line.trim().equalsIgnoreCase("exit") || line.trim().equalsIgnoreCase("end") || 
+                line.trim().equalsIgnoreCase("salir")) {
+                System.out.println("Hasta luego!");
                 break;
             }
             
@@ -48,7 +49,7 @@ public class REPL {
                 Program program = parser.parseProgram();
                 
                 if (parser.getErrors().size() > 0) {
-                    System.out.println("Parser errors:");
+                    System.out.println("Errores del parser:");
                     for (String error : parser.getErrors()) {
                         System.out.println("  " + error);
                     }

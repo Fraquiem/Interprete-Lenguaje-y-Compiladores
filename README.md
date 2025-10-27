@@ -6,6 +6,9 @@ Este es un intérprete completo del lenguaje Go implementado en Java 21.
 - [Inicio Rápido](QUICK_START.md) - Comienza en 5 minutos
 - [Guía Completa del Lenguaje](LANGUAGE_GUIDE.md) - Documentación detallada
 
+📖 **¿Quieres entender cómo funciona?**
+- 🔬 [Guía de Compiladores e Intérpretes](COMPILADORES_GUIDE.md) - Análisis detallado de cada componente
+
 ## Características
 
 - **Lexer completo** - Tokeniza el código fuente en tokens reconocibles

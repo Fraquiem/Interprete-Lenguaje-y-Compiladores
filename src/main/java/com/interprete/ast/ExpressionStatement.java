@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa una expresión usada como statement.
  * Ejemplo: x + 5;
  */
-@Getter
 public class ExpressionStatement extends Statement {
     private Expression expression;
     
@@ -15,6 +13,10 @@ public class ExpressionStatement extends Statement {
         super(token);
         this.expression = expression;
     }
+    public Expression getExpression() {
+        return expression;
+    }
+
     
     @Override
     public String toString() {

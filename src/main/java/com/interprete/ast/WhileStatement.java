@@ -1,13 +1,11 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa un bucle while.
  * Ejemplo: while (x < 10) { x = x + 1; }
  */
-@Getter
 public class WhileStatement extends Statement {
     private Expression condition;
     private BlockStatement body;
@@ -17,6 +15,14 @@ public class WhileStatement extends Statement {
         this.condition = condition;
         this.body = body;
     }
+    public Expression getCondition() {
+        return condition;
+    }
+
+    public BlockStatement getBody() {
+        return body;
+    }
+
     
     @Override
     public String toString() {

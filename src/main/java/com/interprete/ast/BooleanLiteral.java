@@ -1,12 +1,10 @@
 package com.interprete.ast;
 
 import com.interprete.token.Token;
-import lombok.Getter;
 
 /**
  * Representa un literal booleano (true/false).
  */
-@Getter
 public class BooleanLiteral extends Expression {
     private Boolean value;
     
@@ -14,6 +12,10 @@ public class BooleanLiteral extends Expression {
         super(token);
         this.value = value;
     }
+    public Boolean getValue() {
+        return value;
+    }
+
     
     @Override
     public String toString() {

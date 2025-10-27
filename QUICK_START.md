@@ -21,7 +21,7 @@ mvn -version   # Debe mostrar Maven 3.8+
 ### Compilar
 
 ```bash
-cd "/home/emanuel/Universidad/Cuarto/Lenguajes y Compiladores/Final"
+cd "/direccion_al_repositorio/Final"
 mvn clean compile
 ```
 
